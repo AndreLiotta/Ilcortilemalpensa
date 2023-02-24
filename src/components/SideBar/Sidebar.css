@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant');
+
+.navItem {
+    font-family: 'Cormorant';
+    font-size: 1.3em;
+    font-weight: bold;
+}
