@@ -13,7 +13,7 @@ import {
   useDisclosure,
   BoxProps,
   FlexProps,
-  Image
+  Image,
 } from "@chakra-ui/react";
 import {
   FiHome,
@@ -30,7 +30,7 @@ import roomsIcon from "@mui/icons-material/BedOutlined";
 import galleryIcon from "@mui/icons-material/LocalFloristOutlined";
 import servicesIcon from "@mui/icons-material/RoofingOutlined";
 import whereIcon from "@mui/icons-material/PinDropOutlined";
-import infoIcon from "@mui/icons-material/InfoOutlined"
+import infoIcon from "@mui/icons-material/InfoOutlined";
 import "./Sidebar.css";
 import logo from "../../assets/logo.png";
 
@@ -70,9 +70,7 @@ export default function Sidebar({ children }: { children: ReactNode }) {
       </Drawer>
       {/* mobilenav */}
       <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }}>
-        {children}
-      </Box>
+      <Box ml={{ base: 0, md: 60 }}>{children}</Box>
     </Box>
   );
 }
@@ -99,10 +97,15 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       {...rest}
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="end">
-        <CloseButton display={{ base: "flex", md: "none"}} onClick={onClose} size='lg' />
+        <CloseButton
+          display={{ base: "flex", md: "none" }}
+          onClick={onClose}
+          size="lg"
+          color={headings}
+        />
       </Flex>
-      <Flex alignItems='center' justifyContent='center'> 
-        <Image src={logo} height='40' alt="Il cortile Malpensa Logo" />
+      <Flex alignItems="center" justifyContent="center">
+        <Image src={logo} height="40" alt="Il cortile Malpensa Logo" />
       </Flex>
       {LinkItems.map((link) => (
         <NavItem key={link.name} icon={link.icon} color={headings}>
@@ -172,8 +175,19 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         variant="ghost"
         onClick={onOpen}
         aria-label="open menu"
-        icon={<FiMenu size={32} color={light} />}
+        icon={<FiMenu size={32} color={backgroundBrown} />}
       />
+      <Flex justifyContent="center" alignItems="center" width="75%">
+        <Text
+          fontSize="3xl"
+          fontFamily="cormorant"
+          fontWeight="bold"
+          display={{ md: "none" }}
+          color={backgroundBrown}
+        >
+          Il cortile B&B
+        </Text>
+      </Flex>
     </Flex>
   );
 };
