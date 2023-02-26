@@ -9,7 +9,6 @@ import {
   Grid,
   theme,
 } from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import Sidebar from "./components/SideBar/SideBar";
 import Hero from "./components/Hero/Hero";
 
