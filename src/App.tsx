@@ -6,6 +6,7 @@ import RoomCard from "./components/RoomCard/RoomCard";
 import RoomCardImg1 from "./assets/RoomCardImg1.jpg";
 import RoomCardImg2 from "./assets/RoomCardImg2.jpg";
 import { useTranslation } from "react-i18next";
+import { headings } from "./Colors";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -19,7 +20,7 @@ function App() {
       flexDirection="column"
       pb={{ base: "8", md: "12" }}
     >
-      <Text fontSize="4xl" fontFamily="Cormorant" fontWeight="bold" py="0.5em">{t("rooms")}</Text>
+      <Text fontSize={{base:"3xl", md:"4xl"}} fontFamily="Cormorant" fontWeight="bold" py="0.5em" color={headings}>{t("rooms")}</Text>
       <Flex
         width={{ base: "90%", md: "80%" }}
         alignItems="center"
