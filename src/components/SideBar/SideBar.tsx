@@ -16,11 +16,6 @@ import {
   Image,
 } from "@chakra-ui/react";
 import {
-  FiHome,
-  FiTrendingUp,
-  FiCompass,
-  FiStar,
-  FiSettings,
   FiMenu,
 } from "react-icons/fi";
 import { IconType } from "react-icons";
@@ -37,14 +32,15 @@ import logo from "../../assets/logo.png";
 interface LinkItemProps {
   name: string;
   icon: IconType;
+  link: string
 }
 
 const LinkItems: Array<LinkItemProps> = [
-  { name: "gallery", icon: galleryIcon as IconType },
-  { name: "rooms", icon: roomsIcon as IconType },
-  { name: "services", icon: servicesIcon as IconType },
-  { name: "where", icon: whereIcon as IconType },
-  { name: "info", icon: infoIcon as IconType },
+  { name: "gallery", icon: galleryIcon as IconType, link: "#gallery" },
+  { name: "rooms", icon: roomsIcon as IconType, link: "#rooms" },
+  { name: "services", icon: servicesIcon as IconType, link: "#services" },
+  { name: "where", icon: whereIcon as IconType, link: "#where" },
+  { name: "info", icon: infoIcon as IconType, link: "#info" },
 ];
 
 export default function Sidebar({ children }: { children: ReactNode }) {
@@ -108,7 +104,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <Image src={logo} height="40" alt="Il cortile Malpensa Logo" />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon} color={headings}>
+        <NavItem key={link.name} icon={link.icon} color={headings} link={link.link} onClick={onClose}>
           {t(link.name)}
         </NavItem>
       ))}
@@ -119,11 +115,12 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
 interface NavItemProps extends FlexProps {
   icon: IconType;
   children: string;
+  link: string;
 }
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+const NavItem = ({ icon, children, link, ...rest }: NavItemProps) => {
   return (
     <Link
-      href="#"
+      href={link}
       style={{ textDecoration: "none" }}
       _focus={{ boxShadow: "none" }}
       className="navItem"
@@ -165,11 +162,15 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     <Flex
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 24 }}
-      height="20"
+      height="14"
       alignItems="center"
       bg={useColorModeValue(navBackground, "gray.900")}
       justifyContent="flex-start"
       {...rest}
+      position="fixed"
+      top="0"
+      width="100%"
+      zIndex="999"
     >
       <IconButton
         variant="ghost"
@@ -184,6 +185,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
           fontWeight="bold"
           display={{ md: "none" }}
           color={backgroundBrown}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           Il cortile B&B
         </Text>
