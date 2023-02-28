@@ -15,9 +15,7 @@ import {
   FlexProps,
   Image,
 } from "@chakra-ui/react";
-import {
-  FiMenu,
-} from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
 import { IconType } from "react-icons";
 import { useTranslation } from "react-i18next";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
@@ -32,7 +30,7 @@ import logo from "../../assets/logo.png";
 interface LinkItemProps {
   name: string;
   icon: IconType;
-  link: string
+  link: string;
 }
 
 const LinkItems: Array<LinkItemProps> = [
@@ -104,7 +102,13 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <Image src={logo} height="40" alt="Il cortile Malpensa Logo" />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon} color={headings} link={link.link} onClick={onClose}>
+        <NavItem
+          key={link.name}
+          icon={link.icon}
+          color={headings}
+          link={link.link}
+          onClick={onClose}
+        >
           {t(link.name)}
         </NavItem>
       ))}
@@ -167,10 +171,10 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       bg={useColorModeValue(navBackground, "gray.900")}
       justifyContent="flex-start"
       {...rest}
-      position="fixed"
+      position="sticky"
+      zIndex="999"
       top="0"
       width="100%"
-      zIndex="999"
     >
       <IconButton
         variant="ghost"
@@ -185,7 +189,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
           fontWeight="bold"
           display={{ md: "none" }}
           color={backgroundBrown}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           Il cortile B&B
         </Text>

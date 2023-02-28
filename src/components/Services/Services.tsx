@@ -74,6 +74,7 @@ export default function Services() {
       justifyContent="center"
       flexDirection="column"
       pb={{ base: "8", md: "12" }}
+      id="services"
     >
       <Text
         fontSize={{ base: "3xl", md: "4xl" }}
@@ -81,7 +82,6 @@ export default function Services() {
         fontWeight="bold"
         pb="0.5em"
         color={headings}
-        id="services"
       >
         {t("services")}
       </Text>

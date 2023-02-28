@@ -14,7 +14,6 @@ export default function Hero() {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      mt={{base: "14", md: "0"}}
     >
       <Box
         backgroundColor="rgba(69, 89, 49, 0.6)"
