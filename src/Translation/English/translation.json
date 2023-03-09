@@ -3,5 +3,6 @@
     "rooms": "Rooms",    
     "services": "Services",
     "where": "Where we are",
-    "info": "Info and booking"
+    "info": "Info and booking",
+    "openInMaps": "Open in Google Maps"
 }

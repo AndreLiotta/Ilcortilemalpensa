@@ -2,7 +2,8 @@ import { Flex, Text, Image, Button } from "@chakra-ui/react";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
 import { useTranslation } from "react-i18next";
 import "./Where.css";
-import map from "../../assets/mapimage.jpg";
+import map from "../../assets/mapimage.png";
+import mapMobile from "../../assets/mapimage-mobile.png";
 
 export default function Where() {
   const { t, i18n } = useTranslation();
@@ -43,17 +44,18 @@ export default function Where() {
         exercitationem facere?
       </Text>
       <Flex width={{ base: "100%", md: "60%" }} height="auto">
-        <Image src={map} borderRadius={{ base: "0", md: "30" }}></Image>
+        <Image src={map} borderRadius="30" display={{base: "none", md: "block"}} shadow="lg"></Image>
+        <Image src={mapMobile} display={{base: "block", md: "none"}} shadow="lg"></Image>
       </Flex>
       <Button
         onClick={() => openInMaps()}
-        mt="1.5"
+        mt="1.5em"
         size={{ base: "sm", md: "md" }}
         backgroundColor={headings}
         color={light}
         id="mapsButton"
       >
-        Apri in google maps
+        {t("openInMaps")}
       </Button>
     </Flex>
   );
