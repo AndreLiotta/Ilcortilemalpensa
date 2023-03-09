@@ -1,13 +1,16 @@
-import { Flex, Text, Image } from "@chakra-ui/react";
+import { Flex, Text, Image, Button } from "@chakra-ui/react";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
 import { useTranslation } from "react-i18next";
-import React, { useState } from "react";
-import Map, { Marker } from "react-map-gl";
-import logoSVG from "../../assets/logo.svg";
 import "./Where.css";
+import map from "../../assets/mapimage.jpg";
 
 export default function Where() {
   const { t, i18n } = useTranslation();
+
+  function openInMaps() {
+    window.open("https://goo.gl/maps/ybBDCuyTGoUn93GW6");
+  }
+
   return (
     <Flex
       width="100%"
@@ -15,7 +18,7 @@ export default function Where() {
       justifyContent="center"
       flexDirection="column"
       pb={{ base: "8", md: "12" }}
-      id="services"
+      id="where"
     >
       <Text
         fontSize={{ base: "3xl", md: "4xl" }}
@@ -39,25 +42,19 @@ export default function Where() {
         animi et incidunt in dolore qui fugiat, obcaecati nobis est ipsa
         exercitationem facere?
       </Text>
-      <Flex width={{base:"100%", md:"80%"}} height={{base: "300px", md:"400px"}} id="mapFlex">
-        <Map
-          initialViewState={{
-            latitude: 45.6739616394043,
-            longitude: 8.739326477050781,
-            zoom: 18,
-          }}
-          
-          dragPan={false}
-          scrollZoom={false}
-          style={{ width: "100%", height: "100%" }}
-          mapStyle="mapbox://styles/mapbox/streets-v9"
-          mapboxAccessToken="pk.eyJ1IjoiYW5kcmVhbGlvdHRhIiwiYSI6ImNsZXI4YTBnZDB1NWEzeG83dmJkaDljZm4ifQ._gXTv-xs8Z7fbeIHX8QR1w"
-        >
-            <Marker latitude={45.6739616394043} longitude={8.739326477050781} anchor="bottom">
-              <Image src={logoSVG} height="100px" background={backgroundBrown}></Image>
-            </Marker>
-        </Map>
+      <Flex width={{ base: "100%", md: "60%" }} height="auto">
+        <Image src={map} borderRadius={{ base: "0", md: "30" }}></Image>
       </Flex>
+      <Button
+        onClick={() => openInMaps()}
+        mt="1.5"
+        size={{ base: "sm", md: "md" }}
+        backgroundColor={headings}
+        color={light}
+        id="mapsButton"
+      >
+        Apri in google maps
+      </Button>
     </Flex>
   );
 }
