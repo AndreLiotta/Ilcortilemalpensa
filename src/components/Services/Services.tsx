@@ -9,8 +9,12 @@ import {
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
-import trainIcon from "@mui/icons-material/TrainOutlined";
+import parkingIcon from "@mui/icons-material/LocalParkingOutlined";
 import airportShuttleIcon from "@mui/icons-material/AirportShuttleOutlined";
+import breakfastIcon from "@mui/icons-material/BakeryDiningOutlined";
+import wifiIcon from "@mui/icons-material/Wifi";
+import airConditioningIcon from "@mui/icons-material/AcUnitOutlined";
+import petFriendlyIcon from "@mui/icons-material/PetsOutlined";
 import { useRef } from "react";
 import { IconType } from "react-icons";
 import { useInViewport } from "react-in-viewport";
@@ -21,51 +25,48 @@ interface ServiceCardProps {
   text: string;
 }
 
-const services: Array<ServiceCardProps> = [
-  {
-    icon: trainIcon as IconType,
-    title: "Servizio",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  },
-  {
-    icon: airportShuttleIcon as IconType,
-    title: "Servizio2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  },
-  {
-    icon: trainIcon as IconType,
-    title: "Servizio",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  },
-  {
-    icon: airportShuttleIcon as IconType,
-    title: "Servizio2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  },
-  {
-    icon: trainIcon as IconType,
-    title: "Servizio",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  },
-  {
-    icon: airportShuttleIcon as IconType,
-    title: "Servizio2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  },
-  {
-    icon: trainIcon as IconType,
-    title: "Servizio",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  },
-  {
-    icon: airportShuttleIcon as IconType,
-    title: "Servizio2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  },
-];
+// "airportShuttle": "Navetta Aeroportuale",
+// "parking": "Parcheggio",
+// "breakfast": "Colazione",
+// "wifi": "WiFi",
+// "airConditioning": "Aria condizionata",
+// "petFriendly": "Pet friendly"
 
 export default function Services() {
   const { t, i18n } = useTranslation();
+
+  const services: Array<ServiceCardProps> = [
+    {
+      icon: airportShuttleIcon as IconType,
+      title: t("airportShuttle"),
+      text: t("airportShuttleText"),
+    },
+    {
+      icon: parkingIcon as IconType,
+      title: t("parking"),
+      text: t("parkingText"),
+    },
+    {
+      icon: breakfastIcon as IconType,
+      title: t("breakfast"),
+      text: t("breakfastText"),
+    },
+    {
+      icon: petFriendlyIcon as IconType,
+      title: t("petFriendly"),
+      text: t("petFriendlyText"),
+    },
+    {
+      icon: wifiIcon as IconType,
+      title: t("wifi"),
+      text: t("wifiText"),
+    },
+    {
+      icon: airConditioningIcon as IconType,
+      title: t("airConditioning"),
+      text: t("airConditioningText"),
+    },
+  ];
 
   return (
     <Flex
@@ -84,6 +85,30 @@ export default function Services() {
         color={headings}
       >
         {t("services")}
+      </Text>
+      <Text
+        fontSize={{ base: "md", md: "xl" }}
+        fontFamily="Cormorant"
+        pb="0.7em"
+        width={{ base: "90%", md: "80%" }}
+        fontWeight="semibold"
+        textAlign="center"
+        color={headings}
+      >
+        {t("servicesText1")}
+      </Text>
+      <Text
+        fontSize={{ base: "md", md: "xl" }}
+        fontFamily="Cormorant"
+        pb="0.7em"
+        width={{ base: "90%", md: "80%" }}
+        fontWeight="semibold"
+        textAlign="center"
+        color={headings}
+      >
+        {t("servicesText2")}
+        <br />
+        {t("servicesText3")}
       </Text>
       <Grid templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}>
         {services.map((service: ServiceCardProps, index) => (
@@ -133,7 +158,8 @@ const ServiceCard = ({ icon, title, text }: ServiceCardProps) => {
         <Text
           fontFamily="Cormorant"
           fontWeight="bold"
-          fontSize={{ base: "md", md: "2xl" }}
+          fontStyle="italic"
+          fontSize={{ base: "lg", md: "2xl" }}
         >
           {title}
         </Text>

@@ -5,9 +5,10 @@ import Hero from "./components/Hero/Hero";
 import Rooms from "./components/Rooms/Rooms";
 import Services from "./components/Services/Services";
 import Where from "./components/Where/Where";
+import Info from "./components/Info/Info"
 
 function App() {
-  const children = [<Hero />, <Rooms />, <Services />, <Where />];
+  const children = [<Hero />, <Rooms />, <Services />, <Where />, <Info/>];
 
   return (
     <ChakraProvider theme={theme}>

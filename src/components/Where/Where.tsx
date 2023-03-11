@@ -38,10 +38,37 @@ export default function Where() {
         fontWeight="semibold"
         textAlign="center"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-        reprehenderit laudantium error, molestiae asperiores amet tempora, sunt
-        animi et incidunt in dolore qui fugiat, obcaecati nobis est ipsa
-        exercitationem facere?
+        {t("whereText1")}
+      </Text>
+      <Text
+        fontSize={{ base: "md", md: "xl" }}
+        fontFamily="Cormorant"
+        pb="0.7em"
+        width={{ base: "90%", md: "80%" }}
+        fontWeight="semibold"
+        textAlign="center"
+      >
+        {t("whereText2")}
+      </Text>
+      <Text
+        fontSize={{ base: "md", md: "xl" }}
+        fontFamily="Cormorant"
+        pb="0.7em"
+        width={{ base: "90%", md: "80%" }}
+        fontWeight="semibold"
+        textAlign="center"
+      >
+        {t("whereText3")}
+      </Text>
+      <Text
+        fontSize={{ base: "md", md: "xl" }}
+        fontFamily="Cormorant"
+        pb="0.7em"
+        width={{ base: "90%", md: "80%" }}
+        fontWeight="semibold"
+        textAlign="center"
+      >
+        {t("whereText4")}
       </Text>
       <Flex width={{ base: "100%", md: "60%" }} height="auto">
         <Image src={map} borderRadius="30" display={{base: "none", md: "block"}} shadow="lg"></Image>
@@ -54,6 +81,10 @@ export default function Where() {
         backgroundColor={headings}
         color={light}
         id="mapsButton"
+        fontFamily="Cormorant"
+        fontWeight="bold"
+        fontSize="1.5em"
+        borderRadius="20"
       >
         {t("openInMaps")}
       </Button>
