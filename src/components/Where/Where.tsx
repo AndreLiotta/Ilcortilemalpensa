@@ -37,6 +37,7 @@ export default function Where() {
         width={{ base: "90%", md: "80%" }}
         fontWeight="semibold"
         textAlign="center"
+        color={headings}
       >
         {t("whereText1")}
       </Text>
@@ -47,6 +48,7 @@ export default function Where() {
         width={{ base: "90%", md: "80%" }}
         fontWeight="semibold"
         textAlign="center"
+        color={headings}
       >
         {t("whereText2")}
       </Text>
@@ -57,6 +59,7 @@ export default function Where() {
         width={{ base: "90%", md: "80%" }}
         fontWeight="semibold"
         textAlign="center"
+        color={headings}
       >
         {t("whereText3")}
       </Text>
@@ -67,6 +70,7 @@ export default function Where() {
         width={{ base: "90%", md: "80%" }}
         fontWeight="semibold"
         textAlign="center"
+        color={headings}
       >
         {t("whereText4")}
       </Text>

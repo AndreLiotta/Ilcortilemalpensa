@@ -100,7 +100,7 @@ export default function Services() {
       <Text
         fontSize={{ base: "md", md: "xl" }}
         fontFamily="Cormorant"
-        pb="0.7em"
+        pb="1.5em"
         width={{ base: "90%", md: "80%" }}
         fontWeight="semibold"
         textAlign="center"
@@ -112,7 +112,7 @@ export default function Services() {
       </Text>
       <Grid templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}>
         {services.map((service: ServiceCardProps, index) => (
-          <GridItem pb="2em">
+          <GridItem pb="1.5em">
             <ServiceCard
               icon={service.icon}
               title={service.title}
@@ -160,6 +160,8 @@ const ServiceCard = ({ icon, title, text }: ServiceCardProps) => {
           fontWeight="bold"
           fontStyle="italic"
           fontSize={{ base: "lg", md: "2xl" }}
+          maxWidth="7.5em"
+          textAlign="center"
         >
           {title}
         </Text>

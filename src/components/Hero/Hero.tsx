@@ -59,7 +59,7 @@ export default function Hero() {
         width={{ base: "90%", md: "80%" }}
         fontWeight="semibold"
         textAlign="center"
-        mt="1.5"
+        mt="10"
         color={headings}
       >
         {t("intro")}
