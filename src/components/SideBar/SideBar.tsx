@@ -14,6 +14,7 @@ import {
   BoxProps,
   FlexProps,
   Image,
+  ScaleFade
 } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 import { IconType } from "react-icons";
@@ -26,6 +27,9 @@ import whereIcon from "@mui/icons-material/PinDropOutlined";
 import infoIcon from "@mui/icons-material/InfoOutlined";
 import "./Sidebar.css";
 import logo from "../../assets/logo.png";
+import enFlag from "../../assets/us.svg";
+import itFlag from "../../assets/it.svg";
+import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 
 interface LinkItemProps {
   name: string;
@@ -76,7 +80,7 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   const { t, i18n } = useTranslation();
   const onClickLanguageChange = (e: any) => {
-    const language = e.target.value;
+    const language = e;
     i18n.changeLanguage(language);
   };
 
@@ -112,6 +116,14 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           {t(link.name)}
         </NavItem>
       ))}
+      <Flex justifyContent="center" mt="10">
+        <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }} onClick={() => onClickLanguageChange("it")}>
+          <Image src={itFlag} h={{ base: "24px", md: "32px" }} mr="1em"></Image>
+        </ScaleFade>
+        <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }} onClick={() => onClickLanguageChange("en")}>
+          <Image src={enFlag} h={{ base: "24px", md: "32px" }} mr="1em"></Image>
+        </ScaleFade>
+      </Flex>
     </Box>
   );
 };
@@ -173,8 +185,9 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       {...rest}
       position="sticky"
       zIndex="999"
-      top="0"
       width="100%"
+      id="navbar"
+      top="0"
     >
       <IconButton
         variant="ghost"

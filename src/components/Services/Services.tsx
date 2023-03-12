@@ -25,13 +25,6 @@ interface ServiceCardProps {
   text: string;
 }
 
-// "airportShuttle": "Navetta Aeroportuale",
-// "parking": "Parcheggio",
-// "breakfast": "Colazione",
-// "wifi": "WiFi",
-// "airConditioning": "Aria condizionata",
-// "petFriendly": "Pet friendly"
-
 export default function Services() {
   const { t, i18n } = useTranslation();
 
