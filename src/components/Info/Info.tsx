@@ -17,7 +17,7 @@ export default function Info() {
 
   function infoButtonAction(action : string) {
     if (action == "email") {
-      window.open('mailto:ilcortile@ hotmail.it');
+      window.open('mailto:ilcortile@hotmail.it');
     } else if (action == "phone") {
       window.open('tel:00393471106528')
     } else if(action =="whatsapp") {
