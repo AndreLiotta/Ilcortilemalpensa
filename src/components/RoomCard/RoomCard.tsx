@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
 import "./RoomCard.css";
+import { useTranslation } from "react-i18next";
 
 const Overlay = () => (
   <ModalOverlay
@@ -21,10 +22,17 @@ const Overlay = () => (
   />
 );
 
-function RoomCard(
-  { img, text, title}: { img: string, text: string, title: string },
-) {
+function RoomCard({
+  img,
+  text,
+  title,
+}: {
+  img: string;
+  text: string;
+  title: string;
+}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { t, i18n } = useTranslation();
   return (
     <Flex
       maxW="sm"
@@ -46,6 +54,7 @@ function RoomCard(
         }}
         m={4}
         background={headings}
+        borderRadius="20"
         size={{ base: "md", md: "lg" }}
         _hover={{
           bg: light,
@@ -59,7 +68,7 @@ function RoomCard(
             color: headings,
           }}
         >
-          Scopri
+          {t("discover")}
         </Text>
       </Button>
 
@@ -71,7 +80,9 @@ function RoomCard(
             {title}
           </ModalHeader>
           <ModalCloseButton size="xl" py="1.6em" px="1em" />
-          <ModalBody fontFamily="Cormorant" fontWeight="bold" fontSize="lg">{text}</ModalBody>
+          <ModalBody fontFamily="Cormorant" fontWeight="bold" fontSize="lg">
+            {text}
+          </ModalBody>
         </ModalContent>
       </Modal>
     </Flex>

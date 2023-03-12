@@ -81,7 +81,7 @@ export default function Where() {
       <Button
         onClick={() => openInMaps()}
         mt="1.5em"
-        size={{ base: "sm", md: "md" }}
+        size={{ base: "md", md: "lg" }}
         backgroundColor={headings}
         color={light}
         id="mapsButton"

@@ -41,22 +41,46 @@ export default function Rooms() {
         alignItems="center"
         justifyContent="space-around"
       >
-        <Flex direction="column" width={{ base: "90%", md: "80%" }} alignItems="center">
+        <Flex
+          direction="column"
+          width={{ base: "90%", md: "80%" }}
+          alignItems="center"
+        >
           <RoomCard
             img={RoomCardImg1}
             text={t("doubleRoomText")}
             title={t("doubleRoomTitle")}
           />
-          <Text fontFamily="Cormorant" fontSize="sm" fontWeight="semibold">{t("doubleRoomTitle")}</Text>
+          <Text
+            fontFamily="Cormorant"
+            fontSize={{ base: "sm", md: "lg" }}
+            fontWeight="semibold"
+            color={headings}
+            mt="1.5"
+          >
+            {t("doubleRoomTitle")}
+          </Text>
         </Flex>
 
-        <Flex direction="column" width={{ base: "90%", md: "80%" }} alignItems="center">
+        <Flex
+          direction="column"
+          width={{ base: "90%", md: "80%" }}
+          alignItems="center"
+        >
           <RoomCard
             img={RoomCardImg2}
             text={t("familyRoomText")}
             title={t("familyRoomTitle")}
           />
-          <Text fontFamily="Cormorant" fontSize="sm" fontWeight="semibold">{t("familyRoomTitle")}</Text>
+          <Text
+            fontFamily="Cormorant"
+            fontSize={{ base: "sm", md: "lg" }}
+            fontWeight="semibold"
+            color={headings}
+            mt="1.5"
+          >
+            {t("familyRoomTitle")}
+          </Text>
         </Flex>
       </Flex>
     </Flex>

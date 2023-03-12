@@ -1,14 +1,28 @@
-import { Flex, Text, Image, Button } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Icon,
+  background,
+  transition,
+  ScaleFade,
+} from "@chakra-ui/react";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
 import { useTranslation } from "react-i18next";
-import infoIcon from "@mui/icons-material/InfoOutlined";
-import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
+import whatsappIcon from "@mui/icons-material/WhatsApp";
+import mailIcon from "@mui/icons-material/MailOutline";
+import phoneIcon from "@mui/icons-material/PhoneOutlined";
 
 export default function Info() {
   const { t, i18n } = useTranslation();
 
-  function sendEmail() {
-    console.log("email sent")
+  function infoButtonAction(action : string) {
+    if (action == "email") {
+      window.open('mailto:ilcortile@ hotmail.it');
+    } else if (action == "phone") {
+      window.open('tel:00393471106528')
+    } else if(action =="whatsapp") {
+      window.open('https://api.whatsapp.com/send?phone=00393471106528')
+    }
   }
 
   return (
@@ -42,13 +56,55 @@ export default function Info() {
         animi et incidunt in dolore qui fugiat, obcaecati nobis est ipsa
         exercitationem facere?
       </Text>
-      <Flex>
-        <Flex border="solid 5px" borderColor={headings} borderRadius="50" onClick={() => sendEmail()}>
-          <EmailIcon w={8} h={8} margin="1em" color={headings} />
-        </Flex>
-        <Flex border="solid 5px" borderColor={headings} borderRadius="50" onClick={() => sendEmail()}>
-          <PhoneIcon w={8} h={8} margin="1em" color={headings} />
-        </Flex>
+      <Flex width={{ base: "80%", md: "25%" }} justifyContent="space-between">
+        <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }}>
+          <Flex
+            border="solid 5px"
+            borderColor={headings}
+            borderRadius="50"
+            onClick={() => infoButtonAction("email")}
+          >
+            <Icon
+              as={mailIcon}
+              w={{ base: 8, md: 10 }}
+              h={{ base: 8, md: 10 }}
+              margin="1em"
+              color={headings}
+            ></Icon>
+          </Flex>
+        </ScaleFade>
+        <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }}>
+          <Flex
+            border="solid 5px"
+            borderColor={headings}
+            borderRadius="50"
+            onClick={() => infoButtonAction("phone")}
+          >
+            <Icon
+              as={phoneIcon}
+              w={{ base: 8, md: 10 }}
+              h={{ base: 8, md: 10 }}
+              margin="1em"
+              color={headings}
+            ></Icon>
+          </Flex>
+        </ScaleFade>
+        <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }}>
+          <Flex
+            border="solid 5px"
+            borderColor={headings}
+            borderRadius="50"
+            onClick={() => infoButtonAction("whatsapp")}
+          >
+            <Icon
+              as={whatsappIcon}
+              w={{ base: 8, md: 10 }}
+              h={{ base: 8, md: 10 }}
+              margin="1em"
+              color={headings}
+            ></Icon>
+          </Flex>
+        </ScaleFade>
       </Flex>
     </Flex>
   );
