@@ -21,7 +21,7 @@ export default function Info() {
     } else if (action == "phone") {
       window.open('tel:00393471106528')
     } else if(action =="whatsapp") {
-      window.open('https://api.whatsapp.com/send?phone=00393471106528')
+      window.open('https://api.whatsapp.com/send?phone=393471106528')
     }
   }
 
