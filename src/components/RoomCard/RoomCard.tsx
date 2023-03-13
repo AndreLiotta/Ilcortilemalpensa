@@ -10,10 +10,13 @@ import {
   ModalHeader,
   Text,
   ScaleFade,
+  Box,
 } from "@chakra-ui/react";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
 import "./RoomCard.css";
 import { useTranslation } from "react-i18next";
+import "../Fonts.css";
+import Carousel from "../Carousel/Carousel";
 
 const Overlay = () => (
   <ModalOverlay
@@ -61,7 +64,7 @@ function RoomCard({
         }}
       >
         <Text
-          fontSize={{ base: "md", md: "3xl" }}
+          fontSize={{ base: "md", md: "2xl" }}
           fontFamily="Cormorant"
           color={light}
           _hover={{
@@ -76,12 +79,15 @@ function RoomCard({
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
         <ModalOverlay />
         <ModalContent backgroundColor={backgroundBrown}>
-          <ModalHeader fontFamily="cormorant" fontSize="2em">
+          <ModalHeader fontFamily="Cormorant" fontSize="3xl" color={headings}>
             {title}
           </ModalHeader>
-          <ModalCloseButton size="xl" py="1.6em" px="1em" />
-          <ModalBody fontFamily="Cormorant" fontWeight="bold" fontSize="lg">
+          <ModalCloseButton size="xl" py="1.6em" px="1em" color={headings} />
+          <ModalBody fontWeight="semibold" fontSize="lg" color={headings}>
             {text}
+            <Box mt="1em">
+              <Carousel></Carousel>
+            </Box>
           </ModalBody>
         </ModalContent>
       </Modal>

@@ -4,6 +4,7 @@ import { backgroundBrown, headings, light, navBackground } from "../../Colors";
 import RoomCard from "../RoomCard/RoomCard";
 import RoomCardImg1 from "../../assets/RoomCardImg1.jpg";
 import RoomCardImg2 from "../../assets/RoomCardImg2.jpg";
+import "../Fonts.css";
 
 export default function Rooms() {
   const { t, i18n } = useTranslation();
@@ -27,10 +28,8 @@ export default function Rooms() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="0.7em"
         width={{ base: "90%", md: "80%" }}
-        fontWeight="semibold"
         textAlign="center"
         color={headings}
       >

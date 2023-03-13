@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./Where.css";
 import map from "../../assets/mapimage.png";
 import mapMobile from "../../assets/mapimage-mobile.png";
+import "../Fonts.css";
 
 export default function Where() {
   const { t, i18n } = useTranslation();
@@ -32,10 +33,8 @@ export default function Where() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="0.7em"
         width={{ base: "90%", md: "80%" }}
-        fontWeight="semibold"
         textAlign="center"
         color={headings}
       >
@@ -43,10 +42,8 @@ export default function Where() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="0.7em"
         width={{ base: "90%", md: "80%" }}
-        fontWeight="semibold"
         textAlign="center"
         color={headings}
       >
@@ -54,10 +51,8 @@ export default function Where() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="0.7em"
         width={{ base: "90%", md: "80%" }}
-        fontWeight="semibold"
         textAlign="center"
         color={headings}
       >
@@ -65,10 +60,8 @@ export default function Where() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="0.7em"
         width={{ base: "90%", md: "80%" }}
-        fontWeight="semibold"
         textAlign="center"
         color={headings}
       >

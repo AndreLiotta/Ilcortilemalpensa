@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import {
   IconButton,
   Box,
@@ -29,7 +29,7 @@ import "./Sidebar.css";
 import logo from "../../assets/logo.png";
 import enFlag from "../../assets/us.svg";
 import itFlag from "../../assets/it.svg";
-import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
+import "../Fonts.css";
 
 interface LinkItemProps {
   name: string;
@@ -174,6 +174,22 @@ interface MobileProps extends FlexProps {
   onOpen: () => void;
 }
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
+  const [yOffset, setYOffset] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  function handleScroll() {
+    const currentYOffset = window.pageYOffset;
+    const visible = yOffset > currentYOffset;
+
+    setYOffset(currentYOffset);
+    setVisible(visible);
+  }
+
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -187,7 +203,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       zIndex="999"
       width="100%"
       id="navbar"
-      top="0"
+      top={visible ? "0" : "-150"}
     >
       <IconButton
         variant="ghost"

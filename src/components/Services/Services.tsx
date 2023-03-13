@@ -18,6 +18,7 @@ import petFriendlyIcon from "@mui/icons-material/PetsOutlined";
 import { useRef } from "react";
 import { IconType } from "react-icons";
 import { useInViewport } from "react-in-viewport";
+import "../Fonts.css";
 
 interface ServiceCardProps {
   icon: IconType;
@@ -81,10 +82,8 @@ export default function Services() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="0.7em"
         width={{ base: "90%", md: "80%" }}
-        fontWeight="semibold"
         textAlign="center"
         color={headings}
       >
@@ -92,10 +91,8 @@ export default function Services() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="1.5em"
         width={{ base: "90%", md: "80%" }}
-        fontWeight="semibold"
         textAlign="center"
         color={headings}
       >
@@ -160,9 +157,7 @@ const ServiceCard = ({ icon, title, text }: ServiceCardProps) => {
         </Text>
         <Text
           align="center"
-          fontFamily="Cormorant"
           fontSize={{ base: "sm", md: "lg" }}
-          fontWeight="semibold"
           w={{ base: "60%", md: "40%" }}
         >
           {text}

@@ -5,6 +5,7 @@ import { backgroundBrown, headings, light, navBackground } from "../../Colors";
 import "./Hero.css";
 import logoLight from "../../assets/logo-light.png";
 import { useTranslation } from "react-i18next";
+import "../Fonts.css";
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
@@ -54,7 +55,6 @@ export default function Hero() {
       </Flex>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="0.7em"
         width={{ base: "90%", md: "80%" }}
         fontWeight="semibold"
@@ -66,7 +66,6 @@ export default function Hero() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
         pb="0.7em"
         width={{ base: "90%", md: "80%" }}
         fontWeight="semibold"

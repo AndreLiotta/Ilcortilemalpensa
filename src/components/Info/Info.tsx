@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import whatsappIcon from "@mui/icons-material/WhatsApp";
 import mailIcon from "@mui/icons-material/MailOutline";
 import phoneIcon from "@mui/icons-material/PhoneOutlined";
+import "../Fonts.css";
 
 export default function Info() {
   const { t, i18n } = useTranslation();
@@ -45,10 +46,8 @@ export default function Info() {
       </Text>
       <Text
         fontSize={{ base: "md", md: "xl" }}
-        fontFamily="Cormorant"
-        pb="0.7em"
+        pb="1em"
         width={{ base: "90%", md: "80%" }}
-        fontWeight="semibold"
         textAlign="center"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
@@ -56,19 +55,20 @@ export default function Info() {
         animi et incidunt in dolore qui fugiat, obcaecati nobis est ipsa
         exercitationem facere?
       </Text>
-      <Flex width={{ base: "80%", md: "25%" }} justifyContent="space-between">
+      <Flex width={{ base: "80%", md: "40%" }} justifyContent="space-between">
         <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }}>
           <Flex
             border="solid 5px"
             borderColor={headings}
             borderRadius="50"
             onClick={() => infoButtonAction("email")}
+            mx="1.5"
           >
             <Icon
               as={mailIcon}
               w={{ base: 8, md: 10 }}
               h={{ base: 8, md: 10 }}
-              margin="1em"
+              margin={{base: "0.5em" , md: "0.8em"}}
               color={headings}
             ></Icon>
           </Flex>
@@ -79,12 +79,13 @@ export default function Info() {
             borderColor={headings}
             borderRadius="50"
             onClick={() => infoButtonAction("phone")}
+            mx="1.5"
           >
             <Icon
               as={phoneIcon}
               w={{ base: 8, md: 10 }}
               h={{ base: 8, md: 10 }}
-              margin="1em"
+              margin={{base: "0.5em" , md: "0.8em"}}
               color={headings}
             ></Icon>
           </Flex>
@@ -95,12 +96,13 @@ export default function Info() {
             borderColor={headings}
             borderRadius="50"
             onClick={() => infoButtonAction("whatsapp")}
+            mx="1.5"
           >
             <Icon
               as={whatsappIcon}
               w={{ base: 8, md: 10 }}
               h={{ base: 8, md: 10 }}
-              margin="1em"
+              margin={{base: "0.5em" , md: "0.8em"}}
               color={headings}
             ></Icon>
           </Flex>

@@ -1,3 +1,4 @@
+import "../Fonts.css";
 
 export default function Footer() {
     return(

@@ -27,6 +27,7 @@
     "react-in-viewport": "^1.0.0-alpha.29",
     "react-map-gl": "^7.0.21",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -50,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.10"
   }
 }
