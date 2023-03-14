@@ -38,6 +38,7 @@ export default function Where() {
         textAlign="center"
         color={headings}
       >
+        {t("whereText0")} <br/>
         {t("whereText1")}
       </Text>
       <Text

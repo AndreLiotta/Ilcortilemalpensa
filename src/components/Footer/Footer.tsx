@@ -44,7 +44,7 @@ export default function Footer() {
               mr="1"
             ></Icon>
             <Link href="https://goo.gl/maps/ybBDCuyTGoUn93GW6" color={headings}>
-              Via Torino 57 Casorate Sempione(VA), 21011
+              Via Torino 63 Casorate Sempione(VA), 21011
             </Link>
           </Flex>
         </Box>
