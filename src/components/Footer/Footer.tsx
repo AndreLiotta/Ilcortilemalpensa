@@ -31,11 +31,11 @@ export default function Footer() {
       justifyContent="center"
     >
       <Flex w="90%" flexDirection={{base: "column", md: "row"}} justifyContent="space-between" my={{base: "1em", md: "10"}}>
-        <Box flexDirection="column">
-          <Text mb="1.5" fontSize={{ base: "sm", md: "lg" }} fontWeight="bold" color={headings}>
+        <Box flexDirection="column" w="full" textAlign="center" mb="1">
+          <Text mb="1.5" fontSize={{ base: "lg", md: "xl" }} fontWeight="bold" color={headings} fontFamily="Cormorant">
             B&B Il Cortile
           </Text>
-          <Flex direction="row" alignItems="center">
+          <Flex direction="row" alignItems="center" justifyContent="center">
             <Icon
               as={whereIcon}
               w={{ base: 4, md: 6 }}
@@ -44,15 +44,15 @@ export default function Footer() {
               mr="1"
             ></Icon>
             <Link href="https://goo.gl/maps/ybBDCuyTGoUn93GW6" color={headings}>
-              Via Torino 57 <br /> Casorate Sempione(VA), 21011
+              Via Torino 57 Casorate Sempione(VA), 21011
             </Link>
           </Flex>
         </Box>
-        <Box flexDirection="column">
-          <Text mb="1.5" fontSize={{ base: "sm", md: "lg" }} fontWeight="bold" color={headings}>
-            Contatti
+        <Box flexDirection="column" w="full" textAlign="center" mb="1">
+          <Text mb="1.5" fontSize={{ base: "lg", md: "xl" }} fontWeight="bold" color={headings} fontFamily="Cormorant">
+            {t('contacts')}
           </Text>
-          <Flex direction="row" alignItems="center" mb="1.5">
+          <Flex direction="row" alignItems="center" mb="1.5" justifyContent="center">
             <Icon
               as={mailIcon}
               w={{ base: 4, md: 6 }}
@@ -62,7 +62,7 @@ export default function Footer() {
             ></Icon>
             <Link href="mailto:ilcortile@hotmail.it" color={headings}>ilcortile@hotmail.it</Link>
           </Flex>
-          <Flex direction="row" alignItems="center">
+          <Flex direction="row" alignItems="center" justifyContent="center">
             <Icon
               as={phoneIcon}
               w={{ base: 4, md: 6 }}
@@ -73,11 +73,11 @@ export default function Footer() {
             <Link href="tel:00393471106528" color={headings}>+39 3471106528</Link>
           </Flex>
         </Box>
-        <Box flexDirection="column">
-          <Text mb="1.5" fontSize={{ base: "sm", md: "lg" }} fontWeight="bold" color={headings}>
-            Altro
+        <Box flexDirection="column" w="full" textAlign="center">
+          <Text mb="1.5" fontSize={{ base: "lg", md: "xl" }} fontWeight="bold" color={headings} fontFamily="Cormorant">
+            {t('other')}
           </Text>
-          <Flex direction="row" alignItems="center" mb="1.5">
+          <Flex direction="row" alignItems="center" mb="1.5" justifyContent="center">
             <Icon
               as={privacyIcon}
               w={{ base: 4, md: 6 }}
@@ -88,7 +88,7 @@ export default function Footer() {
             <Link onClick={() => openPdf()} color={headings}>Privacy Policy</Link>
           </Flex>
 
-          <Flex direction="row" alignItems="center">
+          <Flex direction="row" alignItems="center" justifyContent="center">
             <Icon
               as={codeIcon}
               w={{ base: 4, md: 6 }}

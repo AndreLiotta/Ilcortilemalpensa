@@ -49,11 +49,9 @@ export default function Info() {
         pb="1em"
         width={{ base: "90%", md: "80%" }}
         textAlign="center"
+        color={headings}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-        reprehenderit laudantium error, molestiae asperiores amet tempora, sunt
-        animi et incidunt in dolore qui fugiat, obcaecati nobis est ipsa
-        exercitationem facere?
+        {t("infoText")}
       </Text>
       <Flex width={{ base: "80%", md: "40%" }} justifyContent="space-between">
         <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }}>

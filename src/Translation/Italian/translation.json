@@ -4,6 +4,8 @@
   "services": "I servizi",
   "where": "Dove siamo",
   "info": "Info e prenotazioni",
+  "contacts": "Contatti",
+  "other": "Altro",
   "openInMaps": "Vedi su Google Maps",
   "intro": "Sono Laura e gestisco il B&B ormai da molti anni sempre con l'entusiasmo di conoscere nuove persone, questa è l'essenza del mio lavoro:",
   "borges": "''Ogni persona che passa nella nostra vita è unica. Sempre lascia un po’ di sé e si porta via un po’ di noi. Ci sarà chi si è portato via molto, ma non ci sarà mai chi non avrà lasciato nulla.'' (Borges)",
@@ -33,5 +35,7 @@
   "whereText1": "L'aeroporto di Milano Malpensa dista meno di 10 minuti in auto (9km dal Terminal 1 e 6km dal Terminal 2).",
   "whereText2": "Il B&B è facilmente raggiungibile da tutte le principali autostrade da e per Milano; la città dista circa 45km (30/40 min in macchina e 45min in treno).",
   "whereText3": "La struttura è vicina (500 metri) alla stazione ferroviaria di Casorate Sempione da cui passa la linea Domodossola-Milano Porta Garibaldi. In 10 minuti  in auto è possibile raggiungere la stazione di Gallarate da cui passano varie linee ferroviarie.",
-  "whereText4": "La città di Varese, con il Sacromonte alle spalle, dista 25 km e si raggiunge in circa 20 min. Il lago Maggiore è distante circa 20km e il lago di Como 40 km, entrambi facilmente raggiungibili in macchina."
+  "whereText4": "La città di Varese, con il Sacromonte alle spalle, dista 25 km e si raggiunge in circa 20 min. Il lago Maggiore è distante circa 20km e il lago di Como 40 km, entrambi facilmente raggiungibili in macchina.",
+
+  "infoText": "Per info e prenotazioni inviare una mail specificando il numero di persone e il periodo prescelto. Se lasciate un recapito telefonico sarete richiamati al più presto."
 }
