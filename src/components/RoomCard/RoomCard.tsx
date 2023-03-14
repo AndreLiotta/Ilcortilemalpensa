@@ -9,7 +9,6 @@ import {
   ModalContent,
   ModalHeader,
   Text,
-  ScaleFade,
   Box,
 } from "@chakra-ui/react";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
@@ -17,13 +16,6 @@ import "./RoomCard.css";
 import { useTranslation } from "react-i18next";
 import "../Fonts.css";
 import Carousel from "../Carousel/Carousel";
-
-const Overlay = () => (
-  <ModalOverlay
-    bg="blackAlpha.300"
-    backdropFilter="blur(10px) hue-rotate(90deg)"
-  />
-);
 
 function RoomCard({
   img,
@@ -39,7 +31,6 @@ function RoomCard({
   return (
     <Flex
       maxW="sm"
-      borderWidth="1px"
       rounded="2xl"
       shadow="lg"
       position="relative"

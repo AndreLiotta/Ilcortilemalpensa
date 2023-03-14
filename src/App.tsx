@@ -5,10 +5,18 @@ import Hero from "./components/Hero/Hero";
 import Rooms from "./components/Rooms/Rooms";
 import Services from "./components/Services/Services";
 import Where from "./components/Where/Where";
-import Info from "./components/Info/Info"
+import Info from "./components/Info/Info";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  const children = [<Hero />, <Rooms />, <Services />, <Where />, <Info/>];
+  const children = [
+    <Hero />,
+    <Rooms />,
+    <Services />,
+    <Where />,
+    <Info />,
+    <Footer />,
+  ];
 
   return (
     <ChakraProvider theme={theme}>
