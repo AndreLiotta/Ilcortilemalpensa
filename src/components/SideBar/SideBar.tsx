@@ -183,11 +183,19 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   });
 
   function handleScroll() {
+    
     const currentYOffset = window.pageYOffset;
     const visible = yOffset > currentYOffset;
 
     setYOffset(currentYOffset);
     setVisible(visible);
+  }
+
+  function handleOpenClick () {
+    onOpen();
+    setYOffset(0)
+    setVisible(false)
+    
   }
 
   return (
@@ -207,7 +215,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     >
       <IconButton
         variant="ghost"
-        onClick={onOpen}
+        onClick={ () => handleOpenClick()}
         aria-label="open menu"
         icon={<FiMenu size={32} color={backgroundBrown} />}
       />

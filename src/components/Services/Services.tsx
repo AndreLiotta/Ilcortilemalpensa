@@ -102,7 +102,7 @@ export default function Services() {
       </Text>
       <Grid templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}>
         {services.map((service: ServiceCardProps, index) => (
-          <GridItem pb="1.5em">
+          <GridItem pb="1.5em" key={index}>
             <ServiceCard
               icon={service.icon}
               title={service.title}

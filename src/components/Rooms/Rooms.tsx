@@ -52,7 +52,7 @@ export default function Rooms() {
           />
           <Text
             fontFamily="Cormorant"
-            fontSize={{ base: "sm", md: "lg" }}
+            fontSize={{ base: "md", md: "xl" }}
             fontWeight="semibold"
             color={headings}
             mt="1.5"
@@ -73,7 +73,7 @@ export default function Rooms() {
           />
           <Text
             fontFamily="Cormorant"
-            fontSize={{ base: "sm", md: "lg" }}
+            fontSize={{ base: "md", md: "xl" }}
             fontWeight="semibold"
             color={headings}
             mt="1.5"
