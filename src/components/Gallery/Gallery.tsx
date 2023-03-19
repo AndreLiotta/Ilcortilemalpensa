@@ -13,6 +13,7 @@ import {
   Text,
   Icon,
   ScaleFade,
+  ModalHeader,
 } from "@chakra-ui/react";
 import RoomCardImg1 from "../../assets/RoomCardImg1.jpg";
 import { useTranslation } from "react-i18next";
@@ -21,6 +22,7 @@ import "./Gallery.css";
 import Footer from "../Footer/Footer";
 import backButtonIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const pictures: any[] = [
   {
@@ -142,6 +144,7 @@ function renderPicOrTitle(pic: any, index: number) {
 function GalleryPicture({ img, title }: { img: string; title: string }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   console.log();
+  const initialRef = React.useRef(null)
 
   return (
     <>
@@ -149,23 +152,25 @@ function GalleryPicture({ img, title }: { img: string; title: string }) {
         justifyContent="center"
         alignItems="center"
         padding={{ base: "0.5em", md: "1em" }}
+        ref={initialRef} tabIndex={-1}
       >
         <Image
           src={img}
           onClick={onOpen}
           height="auto"
           width="full"
-          borderRadius="md"
+          borderRadius="lg"
           _hover={{ cursor: "pointer" }}
           shadow="md"
         ></Image>
-      </Flex>
+      </Flex >
 
       <Modal
         isOpen={isOpen}
         onClose={onClose}
         size={{ base: "3xl", md: "5xl" }}
         isCentered
+        initialFocusRef={initialRef}
       >
         <ModalOverlay />
         <ModalContent
@@ -173,7 +178,7 @@ function GalleryPicture({ img, title }: { img: string; title: string }) {
           justifyContent="center"
           alignItems="center"
         >
-          <ModalCloseButton size="lg" />
+          <ModalCloseButton size="lg" variant="ghost" color={headings}/>
           <ModalBody padding="0">
             <Image src={img} width="full" h="auto" borderRadius="md"></Image>
           </ModalBody>

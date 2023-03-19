@@ -16,6 +16,7 @@ import "./RoomCard.css";
 import { useTranslation } from "react-i18next";
 import "../Fonts.css";
 import Carousel from "../Carousel/Carousel";
+import { bgcolor } from "@mui/system";
 
 function RoomCard({
   img,
@@ -53,13 +54,14 @@ function RoomCard({
         _hover={{
           bg: light,
         }}
+        className="group"
       >
         <Text
           fontSize={{ base: "md", md: "2xl" }}
           fontFamily="Cormorant"
           color={light}
-          _hover={{
-            color: headings,
+          _groupHover={{
+            color: headings
           }}
         >
           {t("discover")}
