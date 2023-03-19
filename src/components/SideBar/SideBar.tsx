@@ -14,7 +14,7 @@ import {
   BoxProps,
   FlexProps,
   Image,
-  ScaleFade
+  ScaleFade,
 } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 import { IconType } from "react-icons";
@@ -34,15 +34,15 @@ import "../Fonts.css";
 interface LinkItemProps {
   name: string;
   icon: IconType;
-  link: string;
+  link: any;
 }
 
 const LinkItems: Array<LinkItemProps> = [
-  { name: "gallery", icon: galleryIcon as IconType, link: "#gallery" },
   { name: "rooms", icon: roomsIcon as IconType, link: "#rooms" },
   { name: "services", icon: servicesIcon as IconType, link: "#services" },
   { name: "where", icon: whereIcon as IconType, link: "#where" },
   { name: "info", icon: infoIcon as IconType, link: "#info" },
+  { name: "gallery", icon: galleryIcon as IconType, link: "/gallery" },
 ];
 
 export default function Sidebar({ children }: { children: ReactNode }) {
@@ -117,11 +117,21 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         </NavItem>
       ))}
       <Flex justifyContent="center" mt="10">
-        <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }} onClick={() => onClickLanguageChange("it")}>
-          <Image src={itFlag} h={{ base: "24px", md: "32px" }} mr="1em"></Image>
+        <ScaleFade
+          initialScale={1}
+          in={true}
+          whileHover={{ scale: 1.1 }}
+          onClick={() => onClickLanguageChange("it")}
+        >
+          <Image src={itFlag} h={{ base: "24px", md: "32px" }} mr="1em" _hover={{cursor: "pointer"}}></Image>
         </ScaleFade>
-        <ScaleFade initialScale={1} in={true} whileHover={{ scale: 1.1 }} onClick={() => onClickLanguageChange("en")}>
-          <Image src={enFlag} h={{ base: "24px", md: "32px" }} mr="1em"></Image>
+        <ScaleFade
+          initialScale={1}
+          in={true}
+          whileHover={{ scale: 1.1 }}
+          onClick={() => onClickLanguageChange("en")}
+        >
+          <Image src={enFlag} h={{ base: "24px", md: "32px" }} mr="1em" _hover={{cursor: "pointer"}}></Image>
         </ScaleFade>
       </Flex>
     </Box>
@@ -183,7 +193,6 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   });
 
   function handleScroll() {
-    
     const currentYOffset = window.pageYOffset;
     const visible = yOffset > currentYOffset;
 
@@ -191,11 +200,10 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     setVisible(visible);
   }
 
-  function handleOpenClick () {
+  function handleOpenClick() {
     onOpen();
-    setYOffset(0)
-    setVisible(false)
-    
+    setYOffset(0);
+    setVisible(false);
   }
 
   return (
@@ -215,7 +223,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     >
       <IconButton
         variant="ghost"
-        onClick={ () => handleOpenClick()}
+        onClick={() => handleOpenClick()}
         aria-label="open menu"
         icon={<FiMenu size={32} color={backgroundBrown} />}
       />

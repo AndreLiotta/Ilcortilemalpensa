@@ -61,6 +61,7 @@ export default function Info() {
             borderRadius="50"
             onClick={() => infoButtonAction("email")}
             mx="1.5"
+            _hover={{cursor: "pointer"}}
           >
             <Icon
               as={mailIcon}
@@ -78,6 +79,7 @@ export default function Info() {
             borderRadius="50"
             onClick={() => infoButtonAction("phone")}
             mx="1.5"
+            _hover={{cursor: "pointer"}}
           >
             <Icon
               as={phoneIcon}
@@ -95,6 +97,7 @@ export default function Info() {
             borderRadius="50"
             onClick={() => infoButtonAction("whatsapp")}
             mx="1.5"
+            _hover={{cursor: "pointer"}}
           >
             <Icon
               as={whatsappIcon}
