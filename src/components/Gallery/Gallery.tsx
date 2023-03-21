@@ -23,7 +23,6 @@ import Footer from "../Footer/Footer";
 import backButtonIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-
 const pictures: any[] = [
   {
     src: RoomCardImg1,
@@ -76,11 +75,9 @@ const pictures: any[] = [
     isPic: true,
   },
 ];
-
 export default function Gallery() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-
   return (
     <Box w="full" h="full" bgColor={backgroundBrown}>
       <Flex alignItems="center" mt="1em">
@@ -101,7 +98,6 @@ export default function Gallery() {
           {t("gallery")}
         </Text>
       </Flex>
-
       <Grid templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}>
         {pictures.map((pic, index) => renderPicOrTitle(pic, index))}
       </Grid>
@@ -109,7 +105,6 @@ export default function Gallery() {
     </Box>
   );
 }
-
 function renderPicOrTitle(pic: any, index: number) {
   if (pic.isPic) {
     return (
@@ -140,19 +135,18 @@ function renderPicOrTitle(pic: any, index: number) {
     );
   }
 }
-
 function GalleryPicture({ img, title }: { img: string; title: string }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   console.log();
-  const initialRef = React.useRef(null)
-
+  const initialRef = React.useRef(null);
   return (
     <>
       <Flex
         justifyContent="center"
         alignItems="center"
         padding={{ base: "0.5em", md: "1em" }}
-        ref={initialRef} tabIndex={-1}
+        ref={initialRef}
+        tabIndex={-1}
       >
         <Image
           src={img}
@@ -163,8 +157,7 @@ function GalleryPicture({ img, title }: { img: string; title: string }) {
           _hover={{ cursor: "pointer" }}
           shadow="md"
         ></Image>
-      </Flex >
-
+      </Flex>
       <Modal
         isOpen={isOpen}
         onClose={onClose}
@@ -178,7 +171,7 @@ function GalleryPicture({ img, title }: { img: string; title: string }) {
           justifyContent="center"
           alignItems="center"
         >
-          <ModalCloseButton size="lg" variant="ghost" color={headings}/>
+          <ModalCloseButton size="lg" variant="ghost" color={headings} />
           <ModalBody padding="0">
             <Image src={img} width="full" h="auto" borderRadius="md"></Image>
           </ModalBody>

@@ -15,6 +15,7 @@ import {
   FlexProps,
   Image,
   ScaleFade,
+  Slide,
 } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 import { IconType } from "react-icons";
@@ -30,6 +31,7 @@ import logo from "../../assets/logo.png";
 import enFlag from "../../assets/us.svg";
 import itFlag from "../../assets/it.svg";
 import "../Fonts.css";
+import { duration } from "@mui/material";
 
 interface LinkItemProps {
   name: string;
@@ -123,7 +125,12 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           whileHover={{ scale: 1.1 }}
           onClick={() => onClickLanguageChange("it")}
         >
-          <Image src={itFlag} h={{ base: "24px", md: "32px" }} mr="1em" _hover={{cursor: "pointer"}}></Image>
+          <Image
+            src={itFlag}
+            h={{ base: "24px", md: "32px" }}
+            mr="1em"
+            _hover={{ cursor: "pointer" }}
+          ></Image>
         </ScaleFade>
         <ScaleFade
           initialScale={1}
@@ -131,7 +138,12 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           whileHover={{ scale: 1.1 }}
           onClick={() => onClickLanguageChange("en")}
         >
-          <Image src={enFlag} h={{ base: "24px", md: "32px" }} mr="1em" _hover={{cursor: "pointer"}}></Image>
+          <Image
+            src={enFlag}
+            h={{ base: "24px", md: "32px" }}
+            mr="1em"
+            _hover={{ cursor: "pointer" }}
+          ></Image>
         </ScaleFade>
       </Flex>
     </Box>
@@ -207,38 +219,45 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   }
 
   return (
-    <Flex
-      ml={{ base: 0, md: 60 }}
-      px={{ base: 4, md: 24 }}
-      height="14"
-      alignItems="center"
-      bg={useColorModeValue(navBackground, "gray.900")}
-      justifyContent="flex-start"
-      {...rest}
-      position="sticky"
-      zIndex="999"
-      width="100%"
-      id="navbar"
-      top={visible ? "0" : "-150"}
+    <Slide
+      direction="top"
+      in={visible}
+      unmountOnExit={true}
+      style={{ zIndex: "999" }}
     >
-      <IconButton
-        variant="ghost"
-        onClick={() => handleOpenClick()}
-        aria-label="open menu"
-        icon={<FiMenu size={32} color={backgroundBrown} />}
-      />
-      <Flex justifyContent="center" alignItems="center" width="75%">
-        <Text
-          fontSize="3xl"
-          fontFamily="cormorant"
-          fontWeight="bold"
-          display={{ md: "none" }}
-          color={backgroundBrown}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          Il cortile B&B
-        </Text>
+      <Flex
+        ml={{ base: 0, md: 60 }}
+        px={{ base: 4, md: 24 }}
+        height="14"
+        alignItems="center"
+        bg={useColorModeValue(navBackground, "gray.900")}
+        justifyContent="flex-start"
+        {...rest}
+        position="sticky"
+        zIndex="999"
+        width="100%"
+        id="navbar"
+        top={visible ? "0" : "-150"}
+      >
+        <IconButton
+          variant="ghost"
+          onClick={() => handleOpenClick()}
+          aria-label="open menu"
+          icon={<FiMenu size={32} color={backgroundBrown} />}
+        />
+        <Flex justifyContent="center" alignItems="center" width="75%">
+          <Text
+            fontSize="3xl"
+            fontFamily="cormorant"
+            fontWeight="bold"
+            display={{ md: "none" }}
+            color={backgroundBrown}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            Il cortile B&B
+          </Text>
+        </Flex>
       </Flex>
-    </Flex>
+    </Slide>
   );
 };
