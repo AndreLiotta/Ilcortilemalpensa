@@ -70,6 +70,7 @@ export default function Services() {
       flexDirection="column"
       pb={{ base: "8", md: "12" }}
       id="services"
+      mb="2.5em"
     >
       <Text
         fontSize={{ base: "3xl", md: "4xl" }}
@@ -128,7 +129,6 @@ const ServiceCard = ({ icon, title, text }: ServiceCardProps) => {
     <ScaleFade
       initialScale={0.9}
       in={enterCount > 0}
-      whileHover={{ scale: 1.1 }}
     >
       <Flex
         flexDirection="column"

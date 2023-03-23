@@ -96,13 +96,14 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}
     >
-      <Flex h="20" alignItems="center" mx="8" justifyContent="end">
-        <CloseButton
-          display={{ base: "flex", md: "none" }}
-          onClick={onClose}
-          size="lg"
-          color={headings}
-        />
+      <Flex
+        h="20"
+        alignItems="center"
+        mx="8"
+        justifyContent="end"
+        display={{ base: "flex", md: "none" }}
+      >
+        <CloseButton onClick={onClose} size="lg" color={headings} />
       </Flex>
       <Flex alignItems="center" justifyContent="center">
         <Image src={logo} height="40" alt="Il cortile Malpensa Logo" />
@@ -221,8 +222,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   return (
     <Slide
       direction="top"
-      in={visible}
-      unmountOnExit={true}
+      in={window.pageYOffset == 0 || visible}
       style={{ zIndex: "999" }}
     >
       <Flex

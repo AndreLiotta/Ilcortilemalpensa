@@ -21,6 +21,7 @@ export default function Where() {
       flexDirection="column"
       pb={{ base: "8", md: "12" }}
       id="where"
+      mb="2.5em"
     >
       <Text
         fontSize={{ base: "3xl", md: "4xl" }}

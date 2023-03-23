@@ -34,6 +34,7 @@ export default function Info() {
       flexDirection="column"
       pb={{ base: "8", md: "12" }}
       id="info"
+      mb="2.5em"
     >
       <Text
         fontSize={{ base: "3xl", md: "4xl" }}

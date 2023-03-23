@@ -15,6 +15,7 @@ export default function Rooms() {
       justifyContent="center"
       flexDirection="column"
       pb={{ base: "8", md: "12" }}
+      mb="2.5em"
       id="rooms"
     >
       <Text
