@@ -77,6 +77,7 @@ const pictures: any[] = [
 ];
 export default function Gallery() {
   const { t, i18n } = useTranslation();
+  console.log(i18n.language)
   const navigate = useNavigate();
   return (
     <Box w="full" h="full" bgColor={backgroundBrown}>
