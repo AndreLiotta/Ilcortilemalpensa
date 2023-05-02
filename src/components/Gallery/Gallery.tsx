@@ -15,7 +15,13 @@ import {
   ScaleFade,
   ModalHeader,
 } from "@chakra-ui/react";
-import RoomCardImg1 from "../../assets/RoomCardImg1.jpg";
+import RoomCardImg1 from "../../assets/Gallery/RoomCardImg1.jpg";
+import RoomCardImg2 from "../../assets/Gallery/RoomCardImg2.jpg";
+import Giardino1 from "../../assets/Gallery/giardino1.jpg";
+import Giardino2 from "../../assets/Gallery/giardino2.jpg";
+import Giardino3 from "../../assets/Gallery/giardino3.jpg";
+import Giardino4 from "../../assets/Gallery/giardino4.jpg";
+import Giardino5 from "../../assets/Gallery/giardino5.jpg";
 import { useTranslation } from "react-i18next";
 import { backgroundBrown, headings, light, navBackground } from "../../Colors";
 import "./Gallery.css";
@@ -27,50 +33,35 @@ const pictures: any[] = [
   {
     src: RoomCardImg1,
     title: "titolo",
-    isPic: false,
+    isPic: true,
   },
   {
-    src: RoomCardImg1,
+    src: RoomCardImg2,
     title: "titolo",
     isPic: true,
   },
   {
-    src: RoomCardImg1,
+    src: Giardino1,
     title: "titolo",
     isPic: true,
   },
   {
-    src: RoomCardImg1,
+    src: Giardino2,
     title: "titolo",
     isPic: true,
   },
   {
-    src: RoomCardImg1,
+    src: Giardino3,
     title: "titolo",
     isPic: true,
   },
   {
-    src: RoomCardImg1,
-    title: "titolo",
-    isPic: false,
-  },
-  {
-    src: RoomCardImg1,
+    src: Giardino4,
     title: "titolo",
     isPic: true,
   },
   {
-    src: RoomCardImg1,
-    title: "titolo",
-    isPic: true,
-  },
-  {
-    src: RoomCardImg1,
-    title: "titolo",
-    isPic: true,
-  },
-  {
-    src: RoomCardImg1,
+    src: Giardino5,
     title: "titolo",
     isPic: true,
   },
