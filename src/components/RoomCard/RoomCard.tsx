@@ -78,9 +78,9 @@ function RoomCard({
           <ModalCloseButton size="xl" py="1.6em" px="1em" color={headings} />
           <ModalBody fontWeight="semibold" fontSize="lg" color={headings}>
             {text}
-            <Box mt="1em">
+            {/* <Box mt="1em">
               <Carousel></Carousel>
-            </Box>
+            </Box> */}
           </ModalBody>
         </ModalContent>
       </Modal>
