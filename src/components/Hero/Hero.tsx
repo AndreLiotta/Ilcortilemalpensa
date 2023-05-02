@@ -1,7 +1,6 @@
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
 import heroImg from "../../assets/HeroImg.jpg";
-import { backgroundBrown, headings, light, navBackground } from "../../Colors";
+import { headings, light } from "../../Colors";
 import "./Hero.css";
 import logoLight from "../../assets/logo-light.png";
 import { useTranslation } from "react-i18next";
@@ -10,7 +9,12 @@ import "../Fonts.css";
 export default function Hero() {
   const { t, i18n } = useTranslation();
   return (
-    <Flex direction="column" alignItems="center" mt={{ base: 14, md: 0 }} mb="2.5em">
+    <Flex
+      direction="column"
+      alignItems="center"
+      mt={{ base: 14, md: 0 }}
+      mb="2.5em"
+    >
       <Flex
         width="100%"
         backgroundImage={heroImg}
