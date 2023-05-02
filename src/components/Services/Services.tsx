@@ -1,14 +1,13 @@
 import {
   Flex,
   Text,
-  Image,
   Icon,
   ScaleFade,
   Grid,
   GridItem,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { backgroundBrown, headings, light, navBackground } from "../../Colors";
+import { headings, light } from "../../Colors";
 import parkingIcon from "@mui/icons-material/LocalParkingOutlined";
 import airportShuttleIcon from "@mui/icons-material/AirportShuttleOutlined";
 import breakfastIcon from "@mui/icons-material/BakeryDiningOutlined";

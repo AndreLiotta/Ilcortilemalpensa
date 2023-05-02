@@ -1,6 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { backgroundBrown, headings, light, navBackground } from "../../Colors";
+import { headings } from "../../Colors";
 import RoomCard from "../RoomCard/RoomCard";
 import RoomCardImg1 from "../../assets/RoomCardImg1.jpg";
 import RoomCardImg2 from "../../assets/RoomCardImg2.jpg";

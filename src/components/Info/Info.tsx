@@ -2,11 +2,9 @@ import {
   Flex,
   Text,
   Icon,
-  background,
-  transition,
   ScaleFade,
 } from "@chakra-ui/react";
-import { backgroundBrown, headings, light, navBackground } from "../../Colors";
+import { headings } from "../../Colors";
 import { useTranslation } from "react-i18next";
 import whatsappIcon from "@mui/icons-material/WhatsApp";
 import mailIcon from "@mui/icons-material/MailOutline";

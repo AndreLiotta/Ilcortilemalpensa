@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import {
   IconButton,
   Box,
@@ -31,7 +31,6 @@ import logo from "../../assets/logo.png";
 import enFlag from "../../assets/us.svg";
 import itFlag from "../../assets/it.svg";
 import "../Fonts.css";
-import { duration } from "@mui/material";
 
 interface LinkItemProps {
   name: string;

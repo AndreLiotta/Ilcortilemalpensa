@@ -13,7 +13,6 @@ import {
   Text,
   Icon,
   ScaleFade,
-  ModalHeader,
 } from "@chakra-ui/react";
 import RoomCardImg1 from "../../assets/Gallery/RoomCardImg1.jpg";
 import RoomCardImg2 from "../../assets/Gallery/RoomCardImg2.jpg";
@@ -23,7 +22,7 @@ import Giardino3 from "../../assets/Gallery/giardino3.jpg";
 import Giardino4 from "../../assets/Gallery/giardino4.jpg";
 import Giardino5 from "../../assets/Gallery/giardino5.jpg";
 import { useTranslation } from "react-i18next";
-import { backgroundBrown, headings, light, navBackground } from "../../Colors";
+import { backgroundBrown, headings } from "../../Colors";
 import "./Gallery.css";
 import Footer from "../Footer/Footer";
 import backButtonIcon from "@mui/icons-material/ArrowBack";
@@ -127,9 +126,9 @@ function renderPicOrTitle(pic: any, index: number) {
     );
   }
 }
+
 function GalleryPicture({ img, title }: { img: string; title: string }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  console.log();
   const initialRef = React.useRef(null);
   return (
     <>
@@ -165,7 +164,7 @@ function GalleryPicture({ img, title }: { img: string; title: string }) {
         >
           <ModalCloseButton size="lg" variant="ghost" color={headings} />
           <ModalBody padding="0">
-            <Image src={img} width="full" h="auto" borderRadius="md"></Image>
+            <Image src={img} w="100%" h="100%" borderRadius="md"></Image>
           </ModalBody>
         </ModalContent>
       </Modal>
