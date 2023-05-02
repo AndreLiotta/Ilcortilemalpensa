@@ -14,30 +14,122 @@ import {
   Icon,
   ScaleFade,
 } from "@chakra-ui/react";
-import RoomCardImg1 from "../../assets/Gallery/RoomCardImg1.jpg";
-import RoomCardImg2 from "../../assets/Gallery/RoomCardImg2.jpg";
+import doubleRoom from "../../assets/Gallery/doubleRoom.jpg";
+import double1 from "../../assets/Gallery/double1.jpg";
+import double2 from "../../assets/Gallery/double2.jpg";
+import double3 from "../../assets/Gallery/double3.jpg";
+
+import familyRoom from "../../assets/Gallery/familyRoom.jpg";
+import family1 from "../../assets/familyRoom1.jpg";
+import family2 from "../../assets/familyRoom2.jpg";
+import family3 from "../../assets/familyRoom3.jpg";
+import family4 from "../../assets/familyRoom4.jpg";
+import family5 from "../../assets/familyRoom5.jpg";
+import family6 from "../../assets/familyRoom6.jpg";
+import family7 from "../../assets/familyRoom7.jpg";
+import family8 from "../../assets/familyRoom8.jpg";
+
 import Giardino1 from "../../assets/Gallery/giardino1.jpg";
 import Giardino2 from "../../assets/Gallery/giardino2.jpg";
 import Giardino3 from "../../assets/Gallery/giardino3.jpg";
 import Giardino4 from "../../assets/Gallery/giardino4.jpg";
 import Giardino5 from "../../assets/Gallery/giardino5.jpg";
+import Giardino6 from "../../assets/Gallery/giardino6.jpg";
+import Giardino7 from "../../assets/Gallery/giardino7.jpg";
+
 import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 import { backgroundBrown, headings } from "../../Colors";
 import "./Gallery.css";
 import Footer from "../Footer/Footer";
 import backButtonIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+
 const pictures: any[] = [
   {
-    src: RoomCardImg1,
+    src: "",
+    title: "doubleRoomTitle",
+    isPic: false,
+  },
+  {
+    src: double3,
     title: "titolo",
     isPic: true,
   },
   {
-    src: RoomCardImg2,
+    src: doubleRoom,
     title: "titolo",
     isPic: true,
+  },
+  {
+    src: double2,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: double1,
+    title: "titolo",
+    isPic: true,
+  },
+
+  {
+    src: "",
+    title: "familyRoomTitle",
+    isPic: false,
+  },
+  {
+    src: family8,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family1,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family2,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family3,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family4,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family5,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family6,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family7,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: familyRoom,
+    title: "titolo",
+    isPic: true,
+  },
+
+
+
+  {
+    src: "",
+    title: "outside",
+    isPic: false,
   },
   {
     src: Giardino1,
@@ -64,14 +156,23 @@ const pictures: any[] = [
     title: "titolo",
     isPic: true,
   },
+  {
+    src: Giardino6,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: Giardino7,
+    title: "titolo",
+    isPic: true,
+  },
 ];
 export default function Gallery() {
   const { t, i18n } = useTranslation();
-  console.log(i18n.language)
   const navigate = useNavigate();
   return (
     <Box w="full" h="full" bgColor={backgroundBrown}>
-      <Flex alignItems="center" mt="1em">
+      <Flex alignItems="center" mt="1em" mb="1em">
         <Icon
           mx="1em"
           color={headings}
@@ -84,18 +185,22 @@ export default function Gallery() {
           fontSize={{ base: "3xl", md: "4xl" }}
           fontFamily="Cormorant"
           fontWeight="bold"
-          color={headings}
+          color={headings}          
         >
           {t("gallery")}
         </Text>
       </Flex>
-      <Grid templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}>
+      <Grid
+        templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+        alignItems="center"
+      >
         {pictures.map((pic, index) => renderPicOrTitle(pic, index))}
       </Grid>
       <Footer></Footer>
     </Box>
   );
 }
+
 function renderPicOrTitle(pic: any, index: number) {
   if (pic.isPic) {
     return (
@@ -120,7 +225,7 @@ function renderPicOrTitle(pic: any, index: number) {
           fontWeight="bold"
           color={headings}
         >
-          {pic.title}
+          {i18n.t(pic.title)}
         </Text>
       </GridItem>
     );
@@ -128,7 +233,7 @@ function renderPicOrTitle(pic: any, index: number) {
 }
 
 function GalleryPicture({ img, title }: { img: string; title: string }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  //const { isOpen, onOpen, onClose } = useDisclosure();
   const initialRef = React.useRef(null);
   return (
     <>
@@ -141,18 +246,18 @@ function GalleryPicture({ img, title }: { img: string; title: string }) {
       >
         <Image
           src={img}
-          onClick={onOpen}
-          height="auto"
+          //onClick={onOpen}
+          height="full"
           width="full"
           borderRadius="lg"
-          _hover={{ cursor: "pointer" }}
+          //_hover={{ cursor: "pointer" }}
           shadow="md"
         ></Image>
       </Flex>
-      <Modal
+      {/* <Modal
         isOpen={isOpen}
         onClose={onClose}
-        size={{ base: "3xl", md: "5xl" }}
+        size={{ base: "md", md: "md" }}
         isCentered
         initialFocusRef={initialRef}
       >
@@ -167,7 +272,7 @@ function GalleryPicture({ img, title }: { img: string; title: string }) {
             <Image src={img} w="100%" h="100%" borderRadius="md"></Image>
           </ModalBody>
         </ModalContent>
-      </Modal>
+      </Modal> */}
     </>
   );
 }

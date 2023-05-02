@@ -11,21 +11,22 @@ import {
   Text,
   Box,
 } from "@chakra-ui/react";
-import { backgroundBrown, headings, light, navBackground } from "../../Colors";
+import { backgroundBrown, headings, light } from "../../Colors";
 import "./RoomCard.css";
 import { useTranslation } from "react-i18next";
 import "../Fonts.css";
 import Carousel from "../Carousel/Carousel";
-import { bgcolor } from "@mui/system";
 
 function RoomCard({
   img,
   text,
   title,
+  cards,
 }: {
   img: string;
   text: string;
   title: string;
+  cards: string[];
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t, i18n } = useTranslation();
@@ -61,7 +62,7 @@ function RoomCard({
           fontFamily="Cormorant"
           color={light}
           _groupHover={{
-            color: headings
+            color: headings,
           }}
         >
           {t("discover")}
@@ -78,9 +79,9 @@ function RoomCard({
           <ModalCloseButton size="xl" py="1.6em" px="1em" color={headings} />
           <ModalBody fontWeight="semibold" fontSize="lg" color={headings}>
             {text}
-            {/* <Box mt="1em">
-              <Carousel></Carousel>
-            </Box> */}
+            <Box mt="1em" display="flex" justifyContent="center">
+              <Carousel cards={cards}></Carousel>
+            </Box>
           </ModalBody>
         </ModalContent>
       </Modal>
