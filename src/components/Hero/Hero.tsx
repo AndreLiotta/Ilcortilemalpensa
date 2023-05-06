@@ -18,7 +18,8 @@ export default function Hero() {
       <Flex
         width="100%"
         backgroundImage={heroImg}
-        bgSize="cover"
+        bgSize={{base: "cover", md: ""}}
+        bgPosition="center"
         alignItems="center"
         justifyContent="center"
         flexDirection="column"

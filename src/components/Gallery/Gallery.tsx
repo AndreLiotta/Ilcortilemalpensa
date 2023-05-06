@@ -18,18 +18,18 @@ import doubleRoom from "../../assets/Gallery/doubleRoom.jpg";
 import double1 from "../../assets/Gallery/double1.jpg";
 import double2 from "../../assets/Gallery/double2.jpg";
 import double3 from "../../assets/Gallery/double3.jpg";
+import double4 from "../../assets/Gallery/double4.jpg";
+import double5 from "../../assets/Gallery/double5.jpg";
 
-import familyRoom from "../../assets/Gallery/familyRoom.jpg";
+import familyRoom from "../../assets/familyRoom.jpg";
 import family1 from "../../assets/familyRoom1.jpg";
 import family2 from "../../assets/familyRoom2.jpg";
 import family3 from "../../assets/familyRoom3.jpg";
 import family4 from "../../assets/familyRoom4.jpg";
 import family5 from "../../assets/familyRoom5.jpg";
 import family6 from "../../assets/familyRoom6.jpg";
-import family7 from "../../assets/familyRoom7.jpg";
-import family8 from "../../assets/familyRoom8.jpg";
 
-import Giardino1 from "../../assets/Gallery/giardino1.jpg";
+import Giardino1 from "../../assets/HeroImg.jpg";
 import Giardino2 from "../../assets/Gallery/giardino2.jpg";
 import Giardino3 from "../../assets/Gallery/giardino3.jpg";
 import Giardino4 from "../../assets/Gallery/giardino4.jpg";
@@ -72,17 +72,23 @@ const pictures: any[] = [
     title: "titolo",
     isPic: true,
   },
+  {
+    src: double4,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: double5,
+    title: "titolo",
+    isPic: true,
+  },
 
   {
     src: "",
     title: "familyRoomTitle",
     isPic: false,
   },
-  {
-    src: family8,
-    title: "titolo",
-    isPic: true,
-  },
+
   {
     src: family1,
     title: "titolo",
@@ -104,22 +110,17 @@ const pictures: any[] = [
     isPic: true,
   },
   {
+    src: familyRoom,
+    title: "titolo",
+    isPic: true,
+  },
+  {
     src: family5,
     title: "titolo",
     isPic: true,
   },
   {
     src: family6,
-    title: "titolo",
-    isPic: true,
-  },
-  {
-    src: family7,
-    title: "titolo",
-    isPic: true,
-  },
-  {
-    src: familyRoom,
     title: "titolo",
     isPic: true,
   },
