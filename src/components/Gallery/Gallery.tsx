@@ -27,7 +27,6 @@ import family2 from "../../assets/familyRoom2.jpg";
 import family3 from "../../assets/familyRoom3.jpg";
 import family4 from "../../assets/familyRoom4.jpg";
 import family5 from "../../assets/familyRoom5.jpg";
-import family6 from "../../assets/familyRoom6.jpg";
 
 import Giardino1 from "../../assets/HeroImg.jpg";
 import Giardino2 from "../../assets/Gallery/giardino2.jpg";
@@ -36,6 +35,8 @@ import Giardino4 from "../../assets/Gallery/giardino4.jpg";
 import Giardino5 from "../../assets/Gallery/giardino5.jpg";
 import Giardino6 from "../../assets/Gallery/giardino6.jpg";
 import Giardino7 from "../../assets/Gallery/giardino7.jpg";
+import Giardino8 from "../../assets/Gallery/giardino8.jpg";
+import Giardino9 from "../../assets/Gallery/giardino9.jpg";
 
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
@@ -99,16 +100,16 @@ const pictures: any[] = [
     title: "titolo",
     isPic: true,
   },
-  {
-    src: family3,
-    title: "titolo",
-    isPic: true,
-  },
-  {
-    src: family4,
-    title: "titolo",
-    isPic: true,
-  },
+  // {
+  //   src: family3,
+  //   title: "titolo",
+  //   isPic: true,
+  // },
+  // {
+  //   src: family4,
+  //   title: "titolo",
+  //   isPic: true,
+  // },
   {
     src: familyRoom,
     title: "titolo",
@@ -119,11 +120,11 @@ const pictures: any[] = [
     title: "titolo",
     isPic: true,
   },
-  {
-    src: family6,
-    title: "titolo",
-    isPic: true,
-  },
+  // {
+  //   src: family6,
+  //   title: "titolo",
+  //   isPic: true,
+  // },
 
 
 
@@ -164,6 +165,16 @@ const pictures: any[] = [
   },
   {
     src: Giardino7,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: Giardino8,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: Giardino9,
     title: "titolo",
     isPic: true,
   },
