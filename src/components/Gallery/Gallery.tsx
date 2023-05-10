@@ -14,19 +14,24 @@ import {
   Icon,
   ScaleFade,
 } from "@chakra-ui/react";
-import doubleRoom from "../../assets/Gallery/doubleRoom.jpg";
-import double1 from "../../assets/Gallery/double1.jpg";
-import double2 from "../../assets/Gallery/double2.jpg";
-import double3 from "../../assets/Gallery/double3.jpg";
-import double4 from "../../assets/Gallery/double4.jpg";
-import double5 from "../../assets/Gallery/double5.jpg";
+import doubleRoom from "../../assets/doubleRoom.jpg";
+import double1 from "../../assets/double1.jpg";
+import double2 from "../../assets/double2.jpg";
+import double3 from "../../assets/double3.jpg";
+import double4 from "../../assets/double4.jpg";
+import double5 from "../../assets/double5.jpg";
+import double6 from "../../assets/double6.jpg";
 
 import familyRoom from "../../assets/familyRoom.jpg";
-import family1 from "../../assets/familyRoom1.jpg";
-import family2 from "../../assets/familyRoom2.jpg";
-import family3 from "../../assets/familyRoom3.jpg";
-import family4 from "../../assets/familyRoom4.jpg";
-import family5 from "../../assets/familyRoom5.jpg";
+import family1 from "../../assets/family1.jpg";
+import family2 from "../../assets/family2.jpg";
+import family3 from "../../assets/family3.jpg";
+import family4 from "../../assets/family4.jpg";
+import family5 from "../../assets/family5.jpg";
+import family6 from "../../assets/family6.jpg";
+import family7 from "../../assets/family7.jpg";
+import family8 from "../../assets/family8.jpg";
+import family9 from "../../assets/family9.jpg";
 
 import Giardino1 from "../../assets/HeroImg.jpg";
 import Giardino2 from "../../assets/Gallery/giardino2.jpg";
@@ -83,13 +88,22 @@ const pictures: any[] = [
     title: "titolo",
     isPic: true,
   },
+  {
+    src: double6,
+    title: "titolo",
+    isPic: true,
+  },
 
   {
     src: "",
     title: "familyRoomTitle",
     isPic: false,
   },
-
+  {
+    src: familyRoom,
+    title: "titolo",
+    isPic: true,
+  },
   {
     src: family1,
     title: "titolo",
@@ -100,18 +114,13 @@ const pictures: any[] = [
     title: "titolo",
     isPic: true,
   },
-  // {
-  //   src: family3,
-  //   title: "titolo",
-  //   isPic: true,
-  // },
-  // {
-  //   src: family4,
-  //   title: "titolo",
-  //   isPic: true,
-  // },
   {
-    src: familyRoom,
+    src: family3,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family4,
     title: "titolo",
     isPic: true,
   },
@@ -120,11 +129,26 @@ const pictures: any[] = [
     title: "titolo",
     isPic: true,
   },
-  // {
-  //   src: family6,
-  //   title: "titolo",
-  //   isPic: true,
-  // },
+  {
+    src: family6,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family7,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family8,
+    title: "titolo",
+    isPic: true,
+  },
+  {
+    src: family9,
+    title: "titolo",
+    isPic: true,
+  },
 
 
 

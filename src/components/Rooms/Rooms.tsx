@@ -7,16 +7,20 @@ import doubleRoom from "../../assets/doubleRoom.jpg";
 import double1 from "../../assets/double1.jpg";
 import double2 from "../../assets/double2.jpg";
 import double3 from "../../assets/double3.jpg";
-import double4 from "../../assets/Gallery/double4.jpg";
-import double5 from "../../assets/Gallery/double5.jpg";
+import double4 from "../../assets/double4.jpg";
+import double5 from "../../assets/double5.jpg";
+import double6 from "../../assets/double6.jpg";
 
 import familyRoom from "../../assets/familyRoom.jpg";
-import family1 from "../../assets/familyRoom1.jpg";
-import family2 from "../../assets/familyRoom2.jpg";
-import family3 from "../../assets/familyRoom3.jpg";
-import family4 from "../../assets/familyRoom4.jpg";
-import family5 from "../../assets/familyRoom5.jpg";
-import family6 from "../../assets/familyRoom6.jpg";
+import family1 from "../../assets/family1.jpg";
+import family2 from "../../assets/family2.jpg";
+import family3 from "../../assets/family3.jpg";
+import family4 from "../../assets/family4.jpg";
+import family5 from "../../assets/family5.jpg";
+import family6 from "../../assets/family6.jpg";
+import family7 from "../../assets/family7.jpg";
+import family8 from "../../assets/family8.jpg";
+import family9 from "../../assets/family9.jpg";
 
 import "../Fonts.css";
 
@@ -24,7 +28,13 @@ const familyRoomCards: string[] = [
   familyRoom,
   family1,
   family2,
+  family3,
+  family4,
   family5,
+  family6,
+  family7,
+  family8,
+  family9,
 ];
 
 const doubleRoomCards: string[] = [
@@ -34,6 +44,7 @@ const doubleRoomCards: string[] = [
   double3,
   double4,
   double5,
+  double6
 ];
 
 export default function Rooms() {
@@ -81,6 +92,7 @@ export default function Rooms() {
             text={t("doubleRoomText")}
             title={t("doubleRoomTitle")}
             cards={doubleRoomCards}
+            price={t("doubleRoomPrice")}
           />
           <Text
             fontFamily="Cormorant"
@@ -103,6 +115,7 @@ export default function Rooms() {
             text={t("familyRoomText")}
             title={t("familyRoomTitle")}
             cards={familyRoomCards}
+            price={t("familyRoomPrice")}
           />
           <Text
             fontFamily="Cormorant"

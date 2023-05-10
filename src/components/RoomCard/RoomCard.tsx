@@ -21,11 +21,13 @@ function RoomCard({
   img,
   text,
   title,
+  price,
   cards,
 }: {
   img: string;
   text: string;
   title: string;
+  price: string;
   cards: string[];
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -78,7 +80,9 @@ function RoomCard({
           </ModalHeader>
           <ModalCloseButton size="xl" py="1.6em" px="1em" color={headings} />
           <ModalBody fontWeight="semibold" fontSize="lg" color={headings}>
-            {text}
+            <Text>{text}</Text>
+            <Text mt="1.5">{price}</Text>
+
             <Box mt="1em" display="flex" justifyContent="center">
               <Carousel cards={cards}></Carousel>
             </Box>
