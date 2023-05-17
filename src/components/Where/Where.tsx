@@ -49,15 +49,6 @@ export default function Where() {
         textAlign="center"
         color={headings}
       >
-        {t("whereText2")}
-      </Text>
-      <Text
-        fontSize={{ base: "md", md: "xl" }}
-        pb="0.7em"
-        width={{ base: "90%", md: "80%" }}
-        textAlign="center"
-        color={headings}
-      >
         {t("whereText3")}
       </Text>
       <Text
