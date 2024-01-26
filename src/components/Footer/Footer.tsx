@@ -141,9 +141,8 @@ export default function Footer() {
                 </Box>
             </Flex>
             <Flex mb={4} alignItems={"center"} justifyContent={'center'} w={'full'} flexDirection={"column"}>
-                <Text color={headings} w={'fit-content'} fontSize={'smaller'}>Codice struttura: H00054</Text>
-                <Text color={headings} w={'fit-content'} fontSize={'smaller'}>Codice regione: CIR
-                    012039-BEB-00003</Text>
+                <Text color={headings} w={'fit-content'} fontSize={'smaller'}>{t('RC')}</Text>
+                <Text color={headings} w={'fit-content'} fontSize={'smaller'}>{t('SC')}</Text>
             </Flex>
         </Flex>
     );

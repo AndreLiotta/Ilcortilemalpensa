@@ -17,11 +17,9 @@
   "familyRoomText": "Our family room includes a king-size bed and a single bed, and upon request, we can add a fourth bed to accommodate additional guests.",
   "familyRoomTitle": "Family Room",
   "familyRoomPrice": "Family Room: €110/€130 (Prices include breakfast and optional airport shuttle service)",
-
   "servicesText1": "The courtyard of the house, which gives its name to the B&B, will be a pleasant surprise for guests. It is a green space that guarantees peace, privacy, and on hot summer days, a relaxing and refreshing shade.",
   "servicesText2": "Within walking distance, you will find two restaurants/pizzerias, a pub, a pastry shop, shops, and the main services such as a pharmacy, post office, bank, and train ticket office.",
   "servicesText3": "At B&B Il Cortile, you will find all the hospitality that only a family-run bed and breakfast can provide to its guests.",
-
   "airportShuttle": "Airport Shuttle",
   "airportShuttleText": "Available upon request for a fee from 6:00 am to 11:00 pm.",
   "parking": "Parking",
@@ -34,12 +32,12 @@
   "airConditioningText": "Free throughout the property.",
   "petFriendly": "Pet friendly",
   "petFriendlyText": "Small pets are allowed upon request.",
-
   "whereText0": "Casorate Sempione is easily accessible from all highways by following the signs to Malpensa Airport. Terminal 2 is 6 km away and Terminal 1 is approximately 9 km away.",
   "whereText1": "Milan is 45 km away and the Rho-Fiera exhibition center is located 30 km away.",
   "whereText3": "To avoid traffic, it is possible to use the train to reach Milan and the main locations of Lake Maggiore (Milan/Arona-Domodossola railway line). The train station is within walking distance from the B&B, approximately 400 meters away.",
   "whereText4": "Varese with its Sacromonte behind it, the lakes of Como, Lecco, Orta, and Lugano, as well as nearby Switzerland, are easily accessible by both car and train.",
-
   "infoText": "For information and reservations, please send us an email specifying the number of people and the preferred dates of your stay. If you leave us a phone number, we will get back to you as soon as possible.",
-  "outside": "Outsides"
+  "outside": "Outsides",
+  "RC": "Region code: CIR 012039-BEB-00003",
+  "SC": "B&B code: H00054"
 }

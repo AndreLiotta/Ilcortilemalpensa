@@ -17,8 +17,6 @@
   "familyRoomText": "Nella camera famigliare è disponibile un letto matrimoniale king size e un letto singolo; è possibile, su richiesta, l’aggiunta di un quarto posto letto.",
   "familyRoomTitle": "Camera famigliare",
   "familyRoomPrice": "Camera famigliare: €110/€130 (I prezzi sono comprensivi di prima colazione ed eventuale servizio navetta aeroportuale)",
-
-
   "servicesText1": "Il cortile di casa che dà il nome al B&B sarà una gradita sorpresa per gli ospiti, uno spazio verde che garantisce quiete e privacy e nelle calde giornate estive una rilassante ombra ristoratrice.",
   "servicesText2": "Raggiungibili a pochi passi due ristoranti/pizzeria, un pub, pasticceria, negozi ed i principali servizi: farmacia, ufficio postale, banca e rivendita biglietti ferroviari.",
   "servicesText3": "Al B&B Il Cortile troverete tutta l'accoglienza che solo un Bed & Breakfast a conduzione famigliare sa dare ai propri clienti.",
@@ -34,12 +32,12 @@
   "airConditioningText": "Gratuita in tutta la struttura",
   "petFriendly": "Pet friendly",
   "petFriendlyText": "Animali di piccola taglia ammessi (su richiesta)",
-
   "whereText0": "Casorate Sempione è facilmente raggiungibile da tutte le autostrade seguendo le indicazioni per l’Aeroporto di Malpensa. Il Terminal 2 dista 6 Km ed il Terminal 1 circa 9 km.",
   "whereText1": "Milano dista 45 km ed il polo fieristico di Rho-Fiera si trova a 30 km.",
   "whereText3": "Volendo evitare il traffico è possibile utilizzare il treno per raggiungere Milano e le principali località del lago Maggiore (linea ferroviaria Milano /Arona - Domodossola), la stazione è raggiungibile a piedi dal B&B, circa 400 metri.",
   "whereText4": "Varese con il suo Sacromonte alle spalle, i laghi di Como, Lecco, Orta e Lugano, così come la vicina Svizzera sono facilmente raggiungibili sia in auto che in treno.",
-
   "infoText": "Per info e prenotazioni inviare una mail specificando il numero di persone e il periodo prescelto. Se lasciate un recapito telefonico sarete richiamati al più presto.",
-  "outside": "Esterni"
+  "outside": "Esterni",
+  "RC": "Codice regione: CIR 012039-BEB-00003",
+  "SC": "Codice struttura: H00054"
 }
