@@ -142,6 +142,7 @@ export default function Footer() {
             </Flex>
             <Flex mb={4} alignItems={"center"} justifyContent={'center'} w={'full'} flexDirection={"column"}>
                 <Text color={headings} w={'fit-content'} fontSize={'smaller'}>{t('RC')}</Text>
+                <Text color={headings} w={'fit-content'} fontSize={'smaller'}>{t('CIN')}</Text>
                 <Text color={headings} w={'fit-content'} fontSize={'smaller'}>{t('SC')}</Text>
             </Flex>
         </Flex>
